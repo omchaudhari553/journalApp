@@ -3,6 +3,7 @@ package com.edigest.jourmalApp.service;
 import com.edigest.jourmalApp.entity.JournalEntry;
 import com.edigest.jourmalApp.entity.User;
 import com.edigest.jourmalApp.repository.JournalEntryRepository;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,6 +15,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Component
+@Slf4j
 public class JournalEntryService {
 
     @Autowired
@@ -61,7 +63,7 @@ public class JournalEntryService {
                 journalEntryRepository.deleteById(id);
             }
         }catch (Exception e){
-            System.out.println(e);
+            log.error("error ",e);
             throw new RuntimeException("An error occurred while deleting the entry.",e);
         }
         return removed;
