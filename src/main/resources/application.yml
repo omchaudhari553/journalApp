@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: prod
+
+#debug: true
+#
+#logging:
+#  level:
+#    com:
+#      edigest:
+#        journalApp: DEBUG

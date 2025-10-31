@@ -1,0 +1,6 @@
+25-10-30 18:54:05.296 [http-nio-8081-exec-2] INFO  o.a.c.c.C.[.[localhost].[/journal] - Initializing Spring DispatcherServlet 'dispatcherServlet' 
+25-10-30 18:54:05.300 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet' 
+25-10-30 18:54:05.302 [http-nio-8081-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms 
+25-10-30 18:54:06.294 [http-nio-8081-exec-2] ERROR c.e.jourmalApp.service.UserService - hahhahhahahaha 
+25-10-30 18:54:06.295 [http-nio-8081-exec-2] WARN  c.e.jourmalApp.service.UserService - hahhahhahahaha 
+25-10-30 18:54:06.296 [http-nio-8081-exec-2] INFO  c.e.jourmalApp.service.UserService - hahhahhahahaha 
