@@ -8,6 +8,18 @@ spring:
       database: journaldb
       auto-index-creation: true
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: omchaudhari553@gmail.com
+    password: wlyp pqum mtfx lwrz
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
   main:
     allow-bean-definition-overriding: true
 
@@ -15,3 +27,7 @@ server:
   port: 8080
   servlet:
     context-path: /journal
+
+weather:
+  api:
+    key: 7282ee8b5ab66850d7e1a65cda2e9fd7

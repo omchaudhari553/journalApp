@@ -1,8 +1,10 @@
 package com.edigest.jourmalApp.controller;
 
+import com.edigest.jourmalApp.api.response.WeatherResponse;
 import com.edigest.jourmalApp.entity.User;
 import com.edigest.jourmalApp.repository.UserRepository;
 import com.edigest.jourmalApp.service.UserService;
+import com.edigest.jourmalApp.service.WeatherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,6 +23,9 @@ public class UserController {
     @Autowired
     UserRepository userRepository;
 
+    @Autowired
+    WeatherService weatherService;
+
     @GetMapping
     public List<User> getAllUsers() {
         return userService.getAll();
@@ -35,7 +40,6 @@ public class UserController {
     public ResponseEntity<?> updateUser(@RequestBody User user) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getName();
-
         User userInDb = userService.findByUserName(username);
         userInDb.setUsername(user.getUsername());
         userInDb.setPassword(user.getPassword());
@@ -50,5 +54,14 @@ public class UserController {
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
-
+    @GetMapping("/greeting")
+    public ResponseEntity<?> greeting() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        WeatherResponse weatherResponse = weatherService.getWheather("Mumbai");
+        String greeting = "";
+        if (weatherResponse != null && weatherResponse.getCurrent() != null) {
+            greeting = ", Weather feels like " + weatherResponse.getCurrent().getFeelslike();
+        }
+        return new ResponseEntity<>("Hi " + authentication.getName() + greeting, HttpStatus.OK);
     }
+}
