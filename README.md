@@ -1,173 +1,197 @@
-# 📓 Journal App (Spring Boot + MongoDB)
+<div align="center">
 
-<!-- BADGES START -->
-![Java](https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Spring Boot](https://img.shields.io/badge/Spring%20Boot-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![JPA](https://img.shields.io/badge/JPA-Persistence-blue?style=for-the-badge)
-![Hibernate](https://img.shields.io/badge/Hibernate-ORM-59666C?style=for-the-badge&logo=hibernate&logoColor=white)
-![Lombok](https://img.shields.io/badge/Lombok-Developer%20Tools-FF6F00?style=for-the-badge)
-![Spring Security](https://img.shields.io/badge/Spring%20Security-6DB33F?style=for-the-badge&logo=springsecurity&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-Auth-orange?style=for-the-badge)
-![Redis](https://img.shields.io/badge/Redis-Caching-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![Apache Kafka](https://img.shields.io/badge/Apache%20Kafka-Messaging-231F20?style=for-the-badge&logo=apachekafka&logoColor=white)
-![JUnit 5](https://img.shields.io/badge/JUnit%205-Testing-25A162?style=for-the-badge&logo=junit5&logoColor=white)
-![Mockito](https://img.shields.io/badge/Mockito-Mocking-78C257?style=for-the-badge)
-![Swagger](https://img.shields.io/badge/Swagger-API%20Docs-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-![SonarQube](https://img.shields.io/badge/SonarQube-Code%20Quality-4E9BCD?style=for-the-badge&logo=sonarqube&logoColor=white)
-![Maven](https://img.shields.io/badge/Maven-Build-C71A36?style=for-the-badge&logo=apachemaven&logoColor=white)
-![Heroku](https://img.shields.io/badge/Heroku-Deploy-430098?style=for-the-badge&logo=heroku&logoColor=white)
-<!-- BADGES END -->
+# 📓 JournalApp
 
----
+### Secure Personal Journal Management Application
 
-## 📘 Project Overview
+A full-stack application that allows users to securely create, manage, and organize personal journal entries online. Built with a scalable Spring Boot REST API and modern frontend, the application supports secure authentication, role-based access, and complete CRUD operations for private journal records.
 
-The **Journal App** is a secure and scalable backend application built using **Java + Spring Boot**.  
-It allows users to create, manage, and organize personal journal entries with **JWT-based authentication**, **role-based access**, and **well-structured REST APIs**.
+<br/>
 
-The application uses **MongoDB** for document-based storage and supports advanced backend practices like **Redis caching**, **Kafka messaging**, **Swagger API documentation**, **JUnit 5 + Mockito testing**, and **SonarQube code quality checks**.  
-It is designed to reflect **production-ready architecture** and real-world backend engineering standards.
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-6DB33F?style=for-the-badge&logo=springboot&logoColor=white)
+![Java](https://img.shields.io/badge/Java-17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-6.0-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-Cache-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![Kafka](https://img.shields.io/badge/Apache_Kafka-Event_Streaming-000000?style=for-the-badge&logo=apachekafka)
+![JWT](https://img.shields.io/badge/JWT-Security-000000?style=for-the-badge&logo=jsonwebtokens)
+
+
+</div>
 
 ---
 
-## 🧰 Technologies Used
+## ✨ Features
 
-- **Backend:** Java, Spring Boot, REST APIs  
-- **Database:** MongoDB  
-- **ORM / Persistence:** Hibernate, JPA *(if used in hybrid modules)*  
-- **Security:** Spring Security, JWT, Role-Based Access Control (RBAC)  
-- **Caching:** Redis  
-- **Messaging:** Apache Kafka  
-- **API Documentation:** Swagger / OpenAPI  
-- **Testing:** JUnit 5, Mockito  
-- **Code Quality:** SonarQube  
-- **Build Tool:** Maven  
-- **Deployment:** Heroku  
-- **Developer Tools:** Lombok  
+| Module | Description |
+|---|---|
+| 🔐 **Authentication** | Secure user registration and login using JWT authentication |
+| 👤 **User Management** | User profile management with secure access |
+| 📓 **Journal Entries** | Create, update, delete, and view personal journal entries |
+| 🔒 **Authorization** | Role-based access for admin and user |
+| ✅ **Validation** | Frontend + backend input validation |
+| 📖 **Swagger UI** | Interactive API documentation |
+| ☁️ **Deployment Ready** | Backend and frontend can be deployed on cloud platforms |
 
 ---
 
-## 🎯 Key Outcomes of the Project
+## 🛠 Tech Stack
 
-- Built a **secure Journal Management system** with RESTful APIs
-- Implemented **Spring Security + JWT authentication**
-- Designed scalable backend services with **clean layered architecture**
-- Stored and managed journal entries using **MongoDB**
-- Improved performance using **Redis caching**
-- Enabled asynchronous workflows using **Apache Kafka**
-- Documented APIs using **Swagger**
-- Ensured reliability via **JUnit 5 and Mockito testing**
-- Maintained code quality with **SonarQube**
-- Deployed application on **Heroku** for public access
+### Backend
 
----
+| Layer | Technology |
+|---|---|
+| Framework | Spring Boot 3.x · Java 17 |
+| Security | Spring Security · JWT |
+| Persistence | Spring Data JPA · Hibernate · MySQL |
+| Validation | Jakarta Bean Validation |
+| Documentation | SpringDoc OpenAPI · Swagger UI |
+| Build Tool | Maven |
 
-## 🧩 Core Modules / Components
+### Frontend
 
-1. Authentication & Authorization (JWT + Spring Security)
-2. User Module
-3. Journal Entry Module
-4. Tags / Categories Module *(optional / if implemented)*
-5. Redis Cache Layer
-6. Kafka Producer & Consumer Events
-7. Swagger API Documentation
-8. JUnit 5 + Mockito Test Suite
-9. SonarQube Quality Checks
-10. Deployment Pipeline (Heroku)
+| Layer | Technology |
+|---|---|
+| Framework | React.js |
+| Styling | CSS / Bootstrap |
+| API Integration | Axios |
+| State Management | React Hooks |
 
 ---
 
-## 👤 User Module
+## 🚀 Getting Started
 
-Manages user accounts and authentication.
+### Prerequisites
 
-### Features
-- User Registration & Login
-- Secure password handling
-- JWT token generation and validation
-- Role-based access control (**USER / ADMIN**)
-- Profile management
-
----
-
-## 📓 Journal Entry Module
-
-Manages creation and organization of journal entries.
-
-### Features
-- Create new journal entries
-- View all journal entries (user-specific)
-- View entry by ID
-- Update existing entries
-- Delete entries
-- Search/filter entries *(by date/title/tags if implemented)*
+| Tool | Version |
+|---|---|
+| Java | 17+ |
+| Maven | 3.8+ |
+| Node.js | 18+ |
+| npm | 9+ |
+| MySQL | 8.0+ |
 
 ---
 
-## 🔐 Security (Spring Security + JWT)
+### 1 · Clone the repository
 
-Security is implemented using **Spring Security** with **JWT-based stateless authentication**:
-
-- JWT validation for protected endpoints
-- Role-based authorization (USER/ADMIN)
-- Secure access for user-specific journal entries
-- Prevents unauthorized access to other users’ data
+```bash
+git clone https://github.com/your-username/journalapp.git
+cd journalapp
+```
 
 ---
 
-## ⚡ Redis Caching
+### 2 · Database setup
 
-Redis is used for caching frequently accessed data to reduce DB load and improve response times.
+```sql
+CREATE DATABASE journal_db;
+```
 
-### Cached Data Examples
-- User profile details
-- Frequently requested journal entries *(as per implementation)*
-
----
-
-## 🔄 Apache Kafka Integration
-
-Kafka is used for **asynchronous and event-driven processing**.
-
-### Use Cases
-- Journal entry created/updated events
-- Notification or audit logging events *(if implemented)*
-- Decouples services for scalability
+Update database credentials in `application.properties`.
 
 ---
 
-## 📄 Swagger API Documentation
+### 3 · Backend setup
 
-- Interactive API documentation using Swagger UI
-- Provides endpoint details, request/response formats, and testing support
+```bash
+cd backend
+mvn clean install
+mvn spring-boot:run
+```
 
----
-
-## 🧪 Testing (JUnit 5 + Mockito)
-
-- Unit testing for service and controller layers
-- Mockito used for mocking dependencies
-- Ensures stable and reliable API behavior
+> API starts at **http://localhost:8080**  
+> Swagger UI: **http://localhost:8080/swagger-ui.html**
 
 ---
 
-## ✅ Code Quality (SonarQube)
+### 4 · Frontend setup
 
-- Static code analysis for bugs, vulnerabilities, and code smells
-- Ensures maintainability and clean code standards
+```bash
+cd frontend
+npm install
+npm start
+```
 
----
-
-## 🚀 Deployment (Heroku)
-
-- Application deployed on **Heroku**
-- Production-ready configuration using environment variables
-- Suitable for sharing project demo with recruiters
+> Frontend runs at **http://localhost:3000**
 
 ---
 
-## 🙏 Thank You
+## 📁 Project Structure
 
-Thank you for exploring this **Journal App** project.  
-Happy coding! 🚀
+```text
+journalapp/
+├── backend/
+│   ├── src/main/java/com/journalapp/
+│   │   ├── controller/
+│   │   │   ├── AuthController.java
+│   │   │   └── JournalController.java
+│   │   ├── service/
+│   │   ├── repository/
+│   │   ├── entity/
+│   │   │   ├── User.java
+│   │   │   └── JournalEntry.java
+│   │   ├── security/
+│   │   └── config/
+│   └── resources/
+│       └── application.properties
+│
+└── frontend/
+    ├── src/
+    │   ├── components/
+    │   ├── pages/
+    │   ├── services/
+    │   └── App.js
+```
+
+---
+
+## 🌐 API Reference
+
+All endpoints except authentication require:
+
+```http
+Authorization: Bearer <jwt_token>
+```
+
+### Authentication
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/api/auth/register` | Register new user |
+| `POST` | `/api/auth/login` | Login user |
+
+### Journal
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/journals` | Get all journal entries |
+| `GET` | `/api/journals/{id}` | Get journal by ID |
+| `POST` | `/api/journals` | Create new journal entry |
+| `PUT` | `/api/journals/{id}` | Update journal entry |
+| `DELETE` | `/api/journals/{id}` | Delete journal entry |
+
+---
+
+## 🔐 Security Features
+
+- JWT-based authentication  
+- Password encryption using BCrypt  
+- Spring Security integration  
+- Role-based authorization  
+- Protected REST APIs  
+
+---
+
+## 📌 Future Enhancements
+
+- AI-powered mood analysis for journal entries  
+- Search and filter journal history  
+- Image upload support  
+- Cloud deployment with AWS  
+- Docker containerization  
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Om Chaudhari** as a full-stack Java project to demonstrate backend development, secure authentication, and REST API design using Spring Boot.
